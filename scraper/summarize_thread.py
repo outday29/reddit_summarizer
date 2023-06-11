@@ -2,7 +2,7 @@ from pathlib import Path
 
 import openai
 import yaml
-from settings import settings
+from .settings import settings
 
 from scraper.models import Summary
 

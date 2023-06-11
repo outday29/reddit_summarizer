@@ -57,6 +57,7 @@ def summarize():
             cur_output_path = report_output_path / subreddit.name
             cur_output_path.mkdir(exist_ok=True, parents=True)
             summarize_thread(thread, output_path=cur_output_path / thread.name)
+    logger.info("Done! 🎉")
 
 
 if __name__ == "__main__":
