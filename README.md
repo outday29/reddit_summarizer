@@ -7,7 +7,7 @@
 First, clone this repository into your system.
 
 ```bash
-git clone ??
+git clone https://github.com/outday29/reddit_summarizer
 ```
 
 Install necessary dependencies
@@ -63,3 +63,7 @@ You may then view the summary in a nice Streamlit UI.
 ```
 streamlit run main.py
 ```
+
+## Limitations
+- Currently the script does not work well for threads that contains external links (such as reference link to article) or non-text contents (such as images and GIFs)
+- Some prompt engineering may be needed. Prefix prompts can be found in `prompts.txt`
