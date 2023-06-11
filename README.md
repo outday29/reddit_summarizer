@@ -16,9 +16,9 @@ Install necessary dependencies
 pip install -r requirements.txt
 ```
 
-Create a Python script called `secret.py` in the top directory. In the Python script, define the following constants:
+Create `.env` in the top directory. Define the following settings:
 
-```python
+```
 PERSONAL_USE_SCRIPT="your_reddit_use_script"
 CLIENT_SECRET="your_reddit_client_secret"
 USER_AGENT="your_reddit_user_agent"
@@ -61,7 +61,7 @@ python main.py
 You may then view the summary in a nice Streamlit UI.
 
 ```
-streamlit run main.py
+streamlit run report.py
 ```
 
 ## Limitations
