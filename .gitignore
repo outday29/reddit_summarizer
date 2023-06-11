@@ -1,0 +1,9 @@
+note
+secret.py
+report/*
+requirements_dev.txt
+archive
+filtered/*
+__pycache__
+.ruff_cache
+.python-version

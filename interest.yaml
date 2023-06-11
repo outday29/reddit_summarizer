@@ -1,0 +1,30 @@
+subreddits:
+- name: ChatGPT
+  comments:
+    comment_min_votes: -1
+    comments_top: 3
+    max_replies: 3
+    max_replies_level: 1
+    reply_min_votes: -1
+  threads:
+  - limit: -1
+    num_comments: -1
+    recency: -1
+    upvote_ratio: -1
+    votes: -1
+- name: singularity
+  comments:
+    comment_min_votes: 0
+    comments_top: 3
+    max_replies: 3
+    max_replies_level: 1
+    reply_min_votes: 0
+  threads:
+  - limit: 5
+    num_comments: -1
+    recency: 2
+    votes: 300
+  - limit: 4
+    num_comments: -1
+    recency: 10
+    votes: 5000

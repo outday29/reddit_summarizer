@@ -1,0 +1,6 @@
+praw
+attrs
+pyyaml
+python-benedict
+streamlit
+openai
