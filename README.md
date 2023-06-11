@@ -61,7 +61,7 @@ python main.py
 You may then view the summary in a nice Streamlit UI.
 
 ```
-streamlit run main.py
+streamlit run report.py
 ```
 
 ## Limitations
