@@ -7,7 +7,7 @@
 First, clone this repository into your system.
 
 ```bash
-git clone ??
+git clone https://github.com/outday29/reddit_summarizer
 ```
 
 Install necessary dependencies
