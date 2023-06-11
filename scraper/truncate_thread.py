@@ -42,7 +42,7 @@ def truncate_thread(
     # input()
 
     for comment in top_comments:
-        if (comment_rules.comment_min_votes != -1) and (
+        if (comment_rules.comment_min_votes is not None) and (
             comment.score < comment_rules.comment_min_votes
         ):
             continue
@@ -88,7 +88,7 @@ def _get_comment_replies(comment, max_replies, max_level, min_votes):
     top_replies = sorted(top_replies, key=lambda c: c.score, reverse=True)[:max_replies]
 
     for reply in top_replies:
-        if (min_votes != -1) and (reply.score < min_votes):
+        if reply.score < min_votes:
             continue
 
         reply_dict = {

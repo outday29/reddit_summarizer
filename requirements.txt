@@ -1,6 +1,7 @@
 praw
-attrs
 pyyaml
 python-benedict
 streamlit
+loguru
 openai
+pydantic

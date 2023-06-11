@@ -7,3 +7,4 @@ filtered/*
 __pycache__
 .ruff_cache
 .python-version
+debug.log

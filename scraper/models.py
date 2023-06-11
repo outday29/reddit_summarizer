@@ -1,35 +1,31 @@
-from typing import List
+from typing import List, Optional
 
-import attrs
-
-
-@attrs.define
-class ThreadsFilter:
-    votes: int = -1
-    num_comments: int = -1
-    upvote_ratio: float = -1
-    recency: int = -1
-    limit: int = -1
+from pydantic import BaseModel
 
 
-@attrs.define
-class CommentsFilter:
-    comments_top: int = -1
-    comment_min_votes: int = -1
-    reply_min_votes: int = -1
-    max_replies: int = -1
-    max_replies_level: int = -1
+class ThreadsFilter(BaseModel):
+    votes: int = 0
+    num_comments: int = 0
+    upvote_ratio: float = 0.0
+    recency: Optional[int] = None
+    limit: int = 0
 
 
-@attrs.define
-class Subreddit:
+class CommentsFilter(BaseModel):
+    comments_top: int = 0
+    comment_min_votes: int = 0
+    reply_min_votes: int = 0
+    max_replies: int = 0
+    max_replies_level: int = 0
+
+
+class Subreddit(BaseModel):
     name: str
     threads: List[ThreadsFilter]
     comments: CommentsFilter
 
 
-@attrs.define
-class Summary:
+class Summary(BaseModel):
     title: str
     link: str
     user: str

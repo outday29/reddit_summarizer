@@ -37,7 +37,7 @@ def scrape_subreddit(
         ]
 
         # Apply limit if specified in filter_rules
-        if (filter_rules.limit != -1) and (len(cur_result) > filter_rules.limit):
+        if len(cur_result) > filter_rules.limit:
             cur_result = cur_result[: filter_rules.limit]
 
         # Add filtered threads to the list
@@ -60,24 +60,20 @@ def _thread_matches_filter_rules(
     bool: True if thread matches all rules, False otherwise.
     """
     # Check popularity rule
-    if rule.votes != -1:
-        # Check if thread score is less than specified votes
-        if thread.score < rule.votes:
-            return False
+    if thread.score < rule.votes:
+        return False
 
     # Check recency rule
-    if rule.recency != -1:
+    if rule.recency is not None:
         age = (datetime.utcnow() - datetime.utcfromtimestamp(thread.created_utc)).days
         if age > rule.recency:
             return False
 
-    if rule.num_comments != -1:
-        if thread.num_comments < rule.num_comments:
-            return False
+    if thread.num_comments < rule.num_comments:
+        return False
 
-    if rule.upvote_ratio != -1:
-        if thread.upvote_ratio < rule.upvote_ratio:
-            return False
+    if thread.upvote_ratio < rule.upvote_ratio:
+        return False
 
     # Check tags_include rule
     # if rule.tags_include:

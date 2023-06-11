@@ -1,6 +1,5 @@
 from pathlib import Path
 
-import attrs
 import openai
 import yaml
 
@@ -15,7 +14,7 @@ model_name = "gpt-3.5-turbo"
 def summarize_thread(thread_path: Path, output_path: Path):
     def write_summary(summary_obj: Summary):
         with open(output_path, "w", encoding="utf-8") as f:
-            yaml.dump(attrs.asdict(summary_obj), f)
+            yaml.dump((summary_obj.dict()), f)
 
     text = thread_path.read_text(encoding="utf-8")
     thread_dict = yaml.safe_load(text)
