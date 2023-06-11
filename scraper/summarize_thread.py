@@ -2,11 +2,11 @@ from pathlib import Path
 
 import openai
 import yaml
+from settings import settings
 
 from scraper.models import Summary
-from secret import OPENAI_KEY
 
-openai.api_key = OPENAI_KEY
+openai.api_key = settings.openai_key
 prompt_path = Path("./prompt.txt")
 model_name = "gpt-3.5-turbo"
 

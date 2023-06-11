@@ -4,4 +4,4 @@ python-benedict
 streamlit
 loguru
 openai
-pydantic
+pydantic[dotenv]

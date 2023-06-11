@@ -1,12 +1,12 @@
 import praw
 
-from secret import CLIENT_SECRET, PASSWORD, PERSONAL_USE_SCRIPT, USER_AGENT, USERNAME
+from .settings import settings
 
 # Initialize Reddit instance
 reddit = praw.Reddit(
-    client_id=PERSONAL_USE_SCRIPT,
-    client_secret=CLIENT_SECRET,
-    user_agent=USER_AGENT,
-    username=USERNAME,
-    password=PASSWORD,
+    client_id=settings.personal_use_script,
+    client_secret=settings.client_secret,
+    user_agent=settings.user_agent,
+    username=settings.username,
+    password=settings.password,
 )
