@@ -1,9 +1,9 @@
 note
 secret.py
-report/*
+report
 requirements_dev.txt
 archive
-filtered/*
+filtered
 __pycache__
 .ruff_cache
 .python-version
