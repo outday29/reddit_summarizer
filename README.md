@@ -1,6 +1,6 @@
 ## Overview
 
-`reddit_summarizer` summarizes subreddit threads using OpenAI GPT 3.5.
+`reddit_summarizer` summarizes subreddit posts using OpenAI GPT 3.5.
 
 ## Usage
 
@@ -35,16 +35,16 @@ Below is the explanation for each field:
 subreddits: 
 # Define a list of settting objects, each specifies one subreddit
   - name: ChatGPT # What is the name of the subreddit to scrape?
-    threads: 
-    # Define a list of thread-specific rules to select which threads in the subreddit to summarize.
-    # Any thread that satisfies any of the rules will be included.
-    - limit: 5 # Number of threads to select at most
-      recency: 7 # Only select threads that are created less than 7 days ago
-      num_comments: 10 # Minimum number of comments the threads need to have
-      upvote_ratio: 0.5 # Minimum upvote_ratio for the thread to be selected
-      votes: 100 # Minimum amount of upvotes threads should have
+    posts: 
+    # Define a list of post-specific rules to select which posts in the subreddit to summarize.
+    # Any post that satisfies any of the rules will be included.
+    - limit: 5 # Number of posts to select at most
+      recency: 7 # Only select posts that are created less than 7 days ago
+      num_comments: 10 # Minimum number of comments the posts need to have
+      upvote_ratio: 0.5 # Minimum upvote_ratio for the post to be selected
+      votes: 100 # Minimum amount of upvotes posts should have
     comments:
-    # For selected threads, specify how should we filter the comments. 
+    # For selected posts, specify how should we filter the comments. 
       comments_top: 10 # Select the top 10 comments
       comment_min_votes: 100 # Minimum number of upvotes comments should have.
       reply_min_votes: 5 # How many upvotes a reply should have to be selected
@@ -65,5 +65,5 @@ streamlit run report.py
 ```
 
 ## Limitations
-- Currently the script does not work well for threads that contains external links (such as reference link to article) or non-text contents (such as images and GIFs)
+- Currently the script does not work well for submission/post that contains external links (such as reference link to article) or non-text contents (such as images and GIFs)
 - Some prompt engineering may be needed. Prefix prompts can be found in `prompts.txt`

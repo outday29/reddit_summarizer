@@ -1,3 +1,3 @@
-Below is a YAML file holding simplified information about a subreddit thread. The top level field refer to the information for the thread, such as votes specify how many upvotes. The comments sections hold a list of objects containing information about each comment as well as replies. The reply objects can also have replies, i.e. replies to a reply. 
+Below is a YAML file holding simplified information about a subreddit submission. The top level field refer to the information for the submission, such as votes specify how many upvotes. The comments sections hold a list of objects containing information about each comment as well as replies. The reply objects can also have replies, i.e. replies to a reply. 
 
-I want you to summarize the overall subreddit into a paragraph, with more attention given to contents of comments with higher votes. If the content is empty, you can just summarize the comments and give a guess on what is the forum content.
+I want you to summarize the overall subreddit into a paragraph in a comprehensive and unbiased way. If the content is empty, you can just summarize the comments and give a guess on what is the forum content.

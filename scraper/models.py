@@ -3,7 +3,7 @@ from typing import List, Optional
 from pydantic import BaseModel
 
 
-class ThreadsFilter(BaseModel):
+class PostFilter(BaseModel):
     votes: int = 0
     num_comments: int = 0
     upvote_ratio: float = 0.0
@@ -21,7 +21,7 @@ class CommentsFilter(BaseModel):
 
 class Subreddit(BaseModel):
     name: str
-    threads: List[ThreadsFilter]
+    posts: List[PostFilter]
     comments: CommentsFilter
 
 

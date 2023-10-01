@@ -9,7 +9,7 @@ import yaml
 from scraper.models import CommentsFilter
 
 
-def truncate_thread(
+def truncate_post(
     submission_object: praw.models.reddit.submission.Submission,
     comment_rules: CommentsFilter,
     output_path: Path,
