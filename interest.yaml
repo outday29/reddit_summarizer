@@ -1,23 +1,23 @@
 subreddits:
 - name: ChatGPT
   comments:
-    comment_min_votes: 100
-    comments_top: 3
+    comment_min_votes: 50
+    comments_top: 10
     max_replies: 2
     max_replies_level: 1
   posts:
-  - limit: 4
+  - limit: 2
     num_comments: 10
-    recency: 7
+    recency: 4
     votes: 10
 - name: StableDiffusion
   comments:
     comment_min_votes: 50
-    comments_top: 3
+    comments_top: 10
     max_replies: 3
     max_replies_level: 1
   posts:
-  - limit: 4
+  - limit: 2
     num_comments: 20
-    recency: 4
+    recency: 2
     votes: 150

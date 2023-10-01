@@ -7,9 +7,7 @@ from scraper.models import PostFilter
 from scraper.reddit_conn import reddit
 
 
-def scrape_subreddit(
-    subreddit_name: str, filter_rules_list: List[PostFilter]
-) -> List:
+def scrape_subreddit(subreddit_name: str, filter_rules_list: List[PostFilter]) -> List:
     """
     Returns all posts in a subreddit that match all the rules specified in PostFilter.
 

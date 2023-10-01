@@ -2,9 +2,10 @@ from pathlib import Path
 
 import openai
 import yaml
-from .settings import settings
 
 from scraper.models import Summary
+
+from .settings import settings
 
 openai.api_key = settings.openai_key
 prompt_path = Path("./prompt.txt")

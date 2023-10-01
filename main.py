@@ -33,9 +33,7 @@ def summarize():
         cur_output_path.mkdir(exist_ok=True, parents=True)
         filter_rules_list = [PostFilter(**rules) for rules in subreddit.posts]
         logger.debug(f"We have post filter rules of {filter_rules_list}")
-        logger.info(
-            f"Scraping and filtering subreddit posts for r/{subreddit.name}"
-        )
+        logger.info(f"Scraping and filtering subreddit posts for r/{subreddit.name}")
         posts_list = scrape_subreddit(
             subreddit.name, filter_rules_list=filter_rules_list
         )
@@ -52,7 +50,7 @@ def summarize():
     subreddit_list = [i for i in filtered_output_path.iterdir() if i.is_dir()]
     logger.info("Summarizing...")
     for subreddit in subreddit_list:
-        logger.info(f"Summarizing subreddit {subreddit.name}")
+        logger.info(f"Summarizing subreddit r/{subreddit.name}")
         for post in subreddit.iterdir():
             cur_output_path = report_output_path / subreddit.name
             cur_output_path.mkdir(exist_ok=True, parents=True)
