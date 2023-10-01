@@ -6,22 +6,18 @@ subreddits:
     max_replies: 2
     max_replies_level: 1
   threads:
-  - limit: 2
+  - limit: 40
     num_comments: 10
     recency: 7
-    votes: 1000
-- name: singularity
+    votes: 10
+- name: StableDiffusion
   comments:
-    comment_min_votes: 100
+    comment_min_votes: 50
     comments_top: 3
     max_replies: 3
     max_replies_level: 1
   threads:
-  - limit: 2
-    num_comments: 10
-    recency: 2
-    votes: 300
-  - limit: 4
-    num_comments: -1
-    recency: 10
-    votes: 5000
+  - limit: 5
+    num_comments: 20
+    recency: 4
+    votes: 150
